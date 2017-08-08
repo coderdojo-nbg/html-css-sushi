@@ -4,55 +4,45 @@ CSS bedeutet Cascading Style Sheet und damit kannst du deine Webseite, die du mi
 
 Du findest bestimmt auch, dass die Webseite, wie sie jetzt aussieht nicht besonders cool und interessant wirkt. Es wäre bestimmt super, wenn man die Farben ändern könnte oder  die Schriftgrößen. Dir fallen bestimmt noch ganz viele andere Dinge ein, die du auf der Seite verändern möchtest.
 
-Aber fangen wir erst mal damit an, wie man CSS in deine HTML-Seite einbindet, damit die Webseite die Angaben überhaupt übernehmen kann.
+Aber fangen wir erst mal damit an, wie eine CSS-Angabe aufgebaut ist. 
+
+## CSS-Angaben: Struktur und Aufbau
+
+Der allgemeine Aufbau einer CSS-Angabe lautet so:
+
+Selektor {
+	Eigenschaft1: Wert;
+	Eigenschaft2: Wert;
+}
+
+Ein Selektor ist das jeweilige HTML-Element z.B h1, welches ich verändern möchte.
+Es gibt zwei verschiedenen Arten von Selektoren:
+1. ein HTML-Element wie z.B. h1, p oder ul
+2. eine Klasse
+
+Klasse werde ich nachher noch näher erklären. 
+Eigenschaften sind z.B. Farbe (color) oder Schriftgröße (font-size) eines HTML-Elements. 
+Der Wert ist dann z.B. der Farbname (z.B. green) oder die Größenangabe (z.B. 16px).
+
+Wenn ich also die Überschrift h1 in meiner Website grün einfärben möchte, dann muss ich folgende CSS-Anweisung angeben:
+
+h1 {
+	color: green;
+}
+
+h1 ist der Selektor, color ist die Eigenschaft und green der Wert.
 
 ## Wie kommt das CSS in meine HTML-Datei?
-In deiner HTML-Datei gibt es verschiedene Tags. Das ist z.B. die Überschrift, die als `<h1></h1>` gekennzeichnet sind. Diese  Angaben in den spitzen Klammern nennt man Tag. Jedes Tag lässt sich mit CSS ansprechen und somit verändern.
-
-### Mit dem Attribut „style“
-Direkt im HTML-Tag kann man mit dem Attribut **style** eine CSS-Angabe eingeben, welche die Überschrift rot erscheinen lässt. Ein Attribut ist eine Art Eigenschaft, die man den HTML-Tags mitgeben kann um die Webseite zu verändern.
-
-Versuche doch selbst einmal die Überschrift in deiner Webseite rot zu färben. Mit folgenden Code wurde die `<h1></h1>`-Überschrift rot eingefärbt.
-
-```html
-<h1 style=“color: red“>Meine Überschrift</h1>
-// red heißt rot auf Englisch
-```
-
-Nun schau dir die Webseite im Browser an. Vergiss nicht zu speichern. Wenn du alles richtig gemacht hast, dann ist die Überschrift jetzt rot.
-
-### Eingebettete Stylesheets
-Eine weitere Möglichkeit die CSS-Angaben mit dem HTML zu verbinden, ist die Angabe im Head-Bereich der Webseite. Der Head-Bereich ist alles zwischen den beiden head-Tags `<head></head>`. Hier kann man folgenden Code eintippen:
-
-```html
-<head>
-  <style type=“text/css“>
-    h1 {
-     color: red;
-    }
-  </style>
-...  
-</head>
-```
-
-Lösche jetzt die Anweisung style=“color:red“ weiter unten im `<h1></h1>`-Tag, es sollte dann so aussehen.
-
-```html
-<h1 style=“color: red“>Meine Überschrift</h1>
-```
-
-Speichere die Datei ab und schau dir die Webseite im Browser an. Wenn du alles richtig gemacht hast, dann ist die Überschrift immer noch rot.
 
 ### Externe Stylesheets
-Diese beiden Möglichkeiten CSS-Anweisungen in eine HTML-Seite einzubinden sind nur für sehr kurze CSS-Anweisungen geeignet. Viel professioneller und auch nicht schwieriger sind externe Stylesheet-Dateien. Hier werden alle CSS-Anweisungen in eine Datei geschrieben. Das ist erstens übersichtlicher und zweitens lassen sich so gleiche CSS-Anweisungen für mehrere Webseiten verwenden, ohne dass man die Anweisungen in jede HTML-Seite eintippen muss.
 
-Natürlich versuchen wir das nun auch bei deiner Webseite wie die Profis zu machen.
+Es gibt verschiedene Möglichkeiten eine CSS-Datei in ein HTML-Dokument einzubinden. Die beste und professionellste ist eine eigene externe CSS-Datei.
 
 Dazu legst du im Editor eine neue Datei an und speicherst diese unter **styles.css** im gleichen Verzeichnis wie deine HTML-Datei.
 
-TODO: (Screenshot Datei anlegen)
+Nun wollen wir einmal versuchen die Überschrift h1 grün einzufärben.
 
-In dieser Datei tippst du nun folgende Anweisung ein:
+Tippe dazu folgendes in die **styles.css** ein:
 
 ```css
 h1 {
@@ -67,28 +57,14 @@ Dann müssen wir die CSS-Datei noch in die HTML-Datei einfügen. Dazu tippst du 
 ```html
 <head>
   <link rel=“stylesheet“ type=“text/css“ href=“styles.css“ />
-  <style type=“text/css“>
-    h1 {
-     color: red;
-    }
-  </style>
 ...  
 </head>
 ```
 
-Jetzt kannst du die CSS-Anweisungen, die wir vorhin eingetippt haben wieder löschen, denn die steht ja jetzt in der css-Datei. Im `<head></head>`-Tag steht dann noch folgendes:
-
-```html
-<head>
-  <link rel=“stylesheet“ type=“text/css“ href=“styles.css“ />
-...  
-</head>
-```
-
-Speichern nicht vergessen! Wenn du alles richtig gemacht hast und du dir die Seite im Browser ansiehst, sollte die Überschrift immer noch rot sein.
+Speichern nicht vergessen! Wenn du alles richtig gemacht hast und du dir die Seite im Browser ansiehst, sollte die Überschrift jetzt grün sein.
 
 ## Verschiedene styles
-Es gibt natürlich viele verschiedene Eigenschaften, die ein Text haben kann. Wir können z.B. auch die Textgröße ändern. Du hast z.B. das Tag `<p>` für Absätze in deiner HTML-Datei. Wir wollen die Schrift in diesen Absätzen etwas größer machen.
+Es gibt natürlich viele verschiedene Eigenschaften, die ein Text haben kann. Wir können z.B. auch die Textgröße ändern. Du hast z.B. das Element (Tag) `<p>` für Absätze in deiner HTML-Datei. Wir wollen die Schrift in diesen Absätzen etwas größer machen.
 
 Dazu brauchen wir die CSS-Anweisung **font-size**.
 
@@ -168,7 +144,6 @@ In der CSS-Datei brauchen wir nun die entsprechende Klassen-Definition:
 ```
 
 Schau dir das Ergebnis im Browser an. Natürlich speichern nicht vergessen.
-TODO: (Screenshot Browser)
 
 Mit den Klassen hast du also die Möglichkeit in jedem gewünschten Tag die Schrift oder Farbe oder beides zu verändern. Du musst nur die Klasse in dem Tag angeben.
 
@@ -210,5 +185,5 @@ Wenn du abspeicherst und die HTML-Seite im Browser ansiehst, kannst du sehen, da
 Mit diesem Grundwissen kannst du nun schon einiges schöner gestalten in deiner Webseite.
 
 Probier es einfach aus. Bei Fragen kannst du dich jederzeit an die Mentoren wenden.
-Wie wäre es mit einer kleinen Webseite, die du mit der nächsten SushiCard erstellen kannst?
+Wie wäre es mit einer eigenen kleinen Webseite?
 Viel Spaß dabei!
