@@ -10,10 +10,12 @@ Aber fangen wir erst mal damit an, wie eine CSS-Angabe aufgebaut ist.
 
 Der allgemeine Aufbau einer CSS-Angabe lautet so:
 
+```css
 Selektor {
 	Eigenschaft1: Wert;
 	Eigenschaft2: Wert;
 }
+```
 
 Ein Selektor ist das jeweilige HTML-Element z.B h1, welches ich verändern möchte.
 Es gibt zwei verschiedenen Arten von Selektoren:
@@ -26,9 +28,11 @@ Der Wert ist dann z.B. der Farbname (z.B. green) oder die Größenangabe (z.B. 1
 
 Wenn ich also die Überschrift h1 in meiner Website grün einfärben möchte, dann muss ich folgende CSS-Anweisung angeben:
 
+```css
 h1 {
 	color: green;
 }
+```
 
 h1 ist der Selektor, color ist die Eigenschaft und green der Wert.
 
