@@ -27,6 +27,7 @@ Eine Auflistung der wichtigsten CSS3-Eigenschaften. Als Wert sind teilweise Beis
 | background-image  | Pfadangabe Bsp: url(image.jpg) |
 | background-repeat | Hintergrundwiederholung: repeat, repeat-x, repeat-y, no-repeat  |
 | background-size  | Hintergrundgröße: auto, cover, contain  |
+| background-position  | Hintergrundposition: left, center, right, top, bottom  |
 
 ## Randlinie (Border)
 
@@ -46,6 +47,7 @@ Eine Auflistung der wichtigsten CSS3-Eigenschaften. Als Wert sind teilweise Beis
 | font-family  | Schriftname Bsp: Verdana  |
 | font-size | Schriftgröße Bsp: 20px, 2em   |
 | font-style  | Schriftstil: normal, italic  |
+| font-weight  | Schriftstärke: bold, normal, bolder, lighter |
 
 ## Text
 
@@ -53,8 +55,16 @@ Eine Auflistung der wichtigsten CSS3-Eigenschaften. Als Wert sind teilweise Beis
 | ------------- | ------------- |
 | text-align  | Textausrichtung: left, right, center, justify  |
 | text-transform  | Texttransformation: none, capitalize, uppercase, lowercase  |
+| text-decoration  | Textgestaltung: none underline, overline, line-through |
 | line-height  | Schrifthöhe Bsp: 30px oder 2em  |
 | color  | Farbwert Bsp: #ff0000  |
+
+## Liste
+
+| Eigenschaft  | Wert |
+| ------------- | ------------- |
+| list-style-image  | Grafik für Listenzeichen: url(), none  |
+| list-style-type  | Listendarstellung: none, disc, circle, square  |
 
 ## Abstand (Padding, Margin)
 
@@ -67,7 +77,7 @@ Eine Auflistung der wichtigsten CSS3-Eigenschaften. Als Wert sind teilweise Beis
 
 | Eigenschaft  | Wert |
 | ------------- | ------------- |
-| float  | Umfließen: left, right  |
+| float  | Umfließen: none, left, right  |
 | clear  | Aufheben von float: both, left, right  |
 | display  | Anzeigen der Elemente: inline, block, inline-block, flexbox  |
-| box-sizing  | Abstand und Rand sind in der Breitenangabe des Elements inklusive  |
+| box-sizing  | Abstand und Rand sind in der Breitenangabe des Elements inklusive: border-box  |
