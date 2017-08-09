@@ -37,7 +37,6 @@ h1 {
 h1 ist der Selektor, color ist die Eigenschaft und green der Wert.
 
 ## Wie kommt das CSS in meine HTML-Datei?
-
 ### Externe Stylesheets
 
 Es gibt verschiedene Möglichkeiten eine CSS-Datei in ein HTML-Dokument einzubinden. Die beste und professionellste ist eine eigene externe CSS-Datei.
@@ -150,6 +149,39 @@ In der CSS-Datei brauchen wir nun die entsprechende Klassen-Definition:
 Schau dir das Ergebnis im Browser an. Natürlich speichern nicht vergessen.
 
 Mit den Klassen hast du also die Möglichkeit in jedem gewünschten Tag die Schrift oder Farbe oder beides zu verändern. Du musst nur die Klasse in dem Tag angeben.
+
+##Verschachtelte Selektoren
+
+Ein Selektor kann auch aus mehreren einzelnen Selektoren bestehen. Z.B. kann ich aus mehreren Absatzes p nur bestimmte Elemente selektieren, indem ich die Selektoren verschachtelt angebe.
+Ein Beispiel: Ich habe zwei Absätze p und möchte aber nur die Listenpunkte vom zweiten Absatz p mit der Klasse gruen auswählen.
+
+Hier der HTML-Code:
+
+```html
+<p>
+ 	Hier steht ein toller Text und eine schöne Liste:
+ 	<ul>
+		<li>Listenpunkt1</li>
+		<li>Listenpunkt2</li>
+	</ul>
+</p>
+<p class=“gruen“>
+ 	Hier steht ein toller grüner Text und eine schöne Liste:
+ 	<ul>
+		<li>Listenpunkt1</li>
+		<li>Listenpunkt2</li>
+	</ul>
+</p>
+```
+
+Die CSS-Anweisung lautet für die Listenpunkte im zweiten Absatz nun so:
+
+```css
+p.gruen ul li {
+ color: red;
+}
+``` 
+Somit werden die Listenpunkte im zweiten Absatz mit der Klasse gruen in der Farbe Rot ausgegeben. Probier es doch einfach aus und tippe den Code in deine HTML- und CSS-Datei. 
 
 ## Noch mehr CSS-Angaben
 Es gibt natürlich noch ganz viele CSS-Eigenschaften, die man in seiner Webseite verwenden kann. Z.B. möchtest du vielleicht die Abstände zwischen zwei Absätzen ändern oder den Text einrücken.
