@@ -55,20 +55,11 @@ Ausnahmen (sog. "self-closing elements"): `<img>`, `<br>`, `<hr>`
 
 ## Liste HTML
 
-| Tag    | Beschreibung                                   |
-|:-------|:-----------------------------------------------|
-| `<ul>` | Ungeordnete Liste (standardmäßig Listenpunkte) |
-| `<ol>` | Geordnete Liste (standardmäßig nummeriert)     |
-| `<li>` | einzelner Listenpunkt                          |
-
-
-Codebeispiel ungeordnete Liste:
-```html
-<ul>
-    <li>Listenpunkt1</li>
-    <li>Listenpunkt2</li>
-</ul>
-```
+| Tag    | Beschreibung                                             |
+|:-------|:---------------------------------------------------------|
+| `<ul>` | Ungeordnete Liste (standardmäßig Listenpunkte)           |
+| `<ol>` | Geordnete Liste (standardmäßig nummeriert)               |
+| `<li>` | Einzelner Listenpunkt (Verwendung in `<ul>` oder `<ol>`) |
 
 ## Bilder
 
