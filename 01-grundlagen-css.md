@@ -153,7 +153,9 @@ Mit den Klassen hast du also die Möglichkeit in jedem gewünschten Tag die Schr
 ##Verschachtelte Selektoren
 
 Ein Selektor kann auch aus mehreren einzelnen Selektoren bestehen. Z.B. kann ich aus mehreren Absatzes p nur bestimmte Elemente selektieren, indem ich die Selektoren verschachtelt angebe.
-Ein Beispiel: Ich habe zwei Absätze p und möchte aber nur die Listenpunkte vom zweiten Absatz p mit der Klasse gruen auswählen.
+
+Ein Beispiel: 
+Ich habe zwei Absätze p und möchte aber nur die Listenpunkte vom zweiten Absatz p mit der Klasse gruen auswählen.
 
 Hier der HTML-Code:
 
